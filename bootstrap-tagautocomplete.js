@@ -82,7 +82,7 @@
       var query = this.query;
       var position = getCaretPosition(this.$element[0]);
       query = query.substring(0, position);
-      var regex = new RegExp("(^|\\s)([" + this.options.character + "][\\w-]*)$");
+      var regex = new RegExp("(^|\\s)([" + this.options.tag + "][\\w-]*)$");
       var result = regex.exec(query);
       if(result && result[2])
         return result[2].trim().toLowerCase();
@@ -131,7 +131,7 @@
   $.fn.tagautocomplete.Constructor = Tagautocomplete
 
   $.fn.tagautocomplete.defaults = $.extend($.fn.typeahead.defaults, {
-    character: '@'
+    tag: '@'
   })
 
 

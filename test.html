@@ -3,12 +3,13 @@
 <script src="deps/rangy-core.js"></script>
 <script src="deps/caret-position.js"></script>
 <script src="bootstrap-tagautocomplete.js"></script>
+<link rel="stylesheet" type="text/css" href="deps/bootstrap.css">
 
-
-<div id="example" contenteditable="true"></div>
+<div id="example" contenteditable="true" style="margin:40px; border-style:solid; border-width: 1px;" ></div>
 
 <script>
 $('div#example').tagautocomplete({
-  source: ['ann', 'bill', 'casey']
+    tag: "##",
+    source: ['ann', 'bill', 'casey']
 });
 </script>

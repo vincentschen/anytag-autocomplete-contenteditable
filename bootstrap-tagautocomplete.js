@@ -41,18 +41,19 @@
 
   , select: function () {
       var val = this.$menu.find('.active').attr('data-value');
-      var updated_val = this.updater(val);
+    //   var updated_val = this.updater(val);
+      var updated_val = val; 
       var offset = updated_val.length - this.length_of_query;
       var position = getCaretPosition(this.$element[0]) + offset;
 
       var text = this.$element.text();
-      text = text.slice(0, position - offset - this.length_of_query) + updated_val.substring(0, updated_val.length) + text.substring(position - offset, text.length);
+      text = text.slice(0, position - offset - this.length_of_query) + updated_val.substring(0, updated_val.length) + this.suffix + text.substring(position - offset, text.length);
       this.$element.text(text);
 
       this.$element.change();
       this.after();
 
-      setCaretPosition(this.$element[0], position);
+      setCaretPosition(this.$element[0], position + this.suffix.length);
 
       return this.hide();
     }
@@ -100,6 +101,7 @@
       
       // Set values that will be needed by select() here, because mouse clicks can change them
       this.length_of_query = tquery.length
+      this.suffix = this.options.suffix
 
       return ~item.toLowerCase().indexOf(tquery)
     }
@@ -132,7 +134,8 @@
   $.fn.tagautocomplete.Constructor = Tagautocomplete
 
   $.fn.tagautocomplete.defaults = $.extend($.fn.typeahead.defaults, {
-    tag: '@'
+    tag: '@',
+    suffix: ''
   })
 
 

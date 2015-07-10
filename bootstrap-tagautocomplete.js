@@ -1,4 +1,5 @@
-/* =============================================================
+/* FORKED from
+ * =============================================================
  * bootstrap-tagautocomplete.js v0.1
  * http://sandglaz.github.com/bootstrap-tagautocomplete
  * =============================================================
@@ -82,10 +83,10 @@
       var query = this.query;
       var position = getCaretPosition(this.$element[0]);
       query = query.substring(0, position);
-      var regex = new RegExp("(^|\\s)([" + this.options.tag + "][\\w-]*)$");
+      var regex = new RegExp("(^|\\s)(" + this.options.tag + "[\\w-]*)$");
       var result = regex.exec(query);
       if(result && result[2])
-        return result[2].trim().toLowerCase();
+        return result[2].trim().toLowerCase().substr(this.options.tag.length);
       return '';
     }
 
@@ -96,7 +97,7 @@
   , matcher: function (item) {
       var tquery = this.extractor();
       if(!tquery) return false;
-
+      
       // Set values that will be needed by select() here, because mouse clicks can change them
       this.length_of_query = tquery.length
 

@@ -1,13 +1,8 @@
-#Bootstrap Tag Autocomplete
+#Bootstrap (Any) Tag Autocomplete
 
-This is a bootstrap plugin to autocomplete tags for contenteditable div elements. It works in the same way tagging people on Facebook, Twitter or Sandglaz works.
+This is a bootstrap plugin to autocomplete tags for contenteditable div elements. It works in the same way tagging people on Facebook, Twitter or Sandglaz works. 
 
-#Demo and Documentation
-
-<a href="http://sandglaz.github.com/bootstrap-tagautocomplete/">http://sandglaz.github.com/bootstrap-tagautocomplete/</a>
+Allows user to set any string as the inline tag (rather than only one character) to prompt autocomplete. 
 
 #Contributing
-
-<a href="https://github.com/Sandglaz/bootstrap-tagautocomplete/issues">Bug reports</a> and <a href="https://github.com/Sandglaz/bootstrap-tagautocomplete/pulls">pull requests</a> are welcomed! If your pull request contains JavaScript patches or features, you must include relevant unit tests.
-
-Thanks!
+Forked from <a href="https://github.com/Sandglaz/bootstrap-tagautocomplete/">Sandglaz</a>. 

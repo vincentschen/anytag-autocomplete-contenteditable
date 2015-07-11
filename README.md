@@ -1,8 +1,6 @@
-#Bootstrap (Any) Tag Autocomplete
+#Any-Tag Autocomplete for Contenteditable 
 
-This is a bootstrap plugin to autocomplete tags for contenteditable div elements. It works in the same way tagging people on Facebook, Twitter or Sandglaz works. 
-
-Allows user to set any string as the inline tag (rather than only one character) to prompt autocomplete. 
+This is a bootstrap plugin to autocomplete tags for contenteditable div elements. Allows user to set any string as the inline tag to prompt autocomplete. 
 
 ##Requirements 
 - bootstrap-typeahead.js
@@ -29,15 +27,21 @@ Attach handler to desired div and pass options.
 - **source** (required _array_): filters results from source 
 - **suffix** (optional _string_): appends suffix upon selection
 
+#####Original Options work as well 
+- **after** (optional _function_): to run after selection  
+- From bootstrap-typeahead: **items**, **updater**, **matcher**, **highlighter** and **sorter**.
+
 ```javascript
+//initialize div element 
+<div id="example" contenteditable="true"></div>
+
+//apply handler 
 $('div#example').tagautocomplete({
     tag: '##',
-    source: ['ann', 'bill', 'casey'],
+    source: ['ann', 'bill', 'casey'], 
     suffix: "## "
 });
 ```
-
-
 
 ##Contributing
 Originally Forked from <a href="https://github.com/Sandglaz/bootstrap-tagautocomplete/">Sandglaz</a>. 

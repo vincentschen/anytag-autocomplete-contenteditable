@@ -22,14 +22,7 @@ This is a bootstrap plugin to autocomplete tags for contenteditable div elements
 
 Attach handler to desired div and pass options. 
 
-####Options 
-- **tag** (required _string_): autocomplete will be triggered by this tag 
-- **source** (required _array_): filters results from source 
-- **suffix** (optional _string_): appends suffix upon selection
-
-#####Original Options work as well 
-- **after** (optional _function_): to run after selection  
-- From bootstrap-typeahead: **items**, **updater**, **matcher**, **highlighter** and **sorter**.
+<a href="http://vincentschen.github.io/anytag-autocomplete-contenteditable/">Demo</a>. 
 
 ```javascript
 //initialize div element 
@@ -42,6 +35,13 @@ $('div#example').tagautocomplete({
     suffix: "## "
 });
 ```
+
+####Options 
+- **tag** (required _string_): autocomplete will be triggered by this tag 
+- **source** (required _array_): filters results from source 
+- **suffix** (optional _string_): appends suffix upon selection
+- **after** (optional _function_): to run after selection  
+- From bootstrap-typeahead: **items**, **updater**, **matcher**, **highlighter** and **sorter**.
 
 ##Contributing
 Originally Forked from <a href="https://github.com/Sandglaz/bootstrap-tagautocomplete/">Sandglaz</a>. 

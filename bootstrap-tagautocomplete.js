@@ -41,13 +41,11 @@
 
   , select: function () {
       var val = this.$menu.find('.active').attr('data-value');
-    //   var updated_val = this.updater(val);
-      var updated_val = val; 
-      var offset = updated_val.length - this.length_of_query;
+      var offset = val.length - this.length_of_query;
       var position = getCaretPosition(this.$element[0]) + offset;
 
       var text = this.$element.text();
-      text = text.slice(0, position - offset - this.length_of_query) + updated_val.substring(0, updated_val.length) + this.suffix + text.substring(position - offset, text.length);
+      text = text.slice(0, position - offset - this.length_of_query) + val.substring(0, val.length) + this.suffix + text.substring(position - offset, text.length);
       this.$element.text(text);
 
       this.$element.change();

@@ -89,10 +89,6 @@
       return '';
     }
 
-  , updater: function(item) {
-      return item+' ';
-  }
-
   , matcher: function (item) {
       var tquery = this.extractor();
       if(!tquery) return false;
